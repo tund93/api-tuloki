@@ -35,7 +35,7 @@ const basePinoOptions = {
             paths: redactFields,
             censor: "**GDPR COMPLIANT**",
           },
-          transport: 
+          transport:
           // configService.get("app.env", { infer: true }).startsWith("prod")
           //   ? {
           //       targets: [
@@ -61,39 +61,39 @@ const basePinoOptions = {
           //         },
           //       ],
           //     }
-          //   : 
+          //   :
             {
-                targets: [
-                  {
-                    target: "pino-pretty",
-                    level: "info", // log only info and above to console
-                    options: {
-                      ...basePinoOptions,
-                      colorize: true,
-                    },
+              targets: [
+                {
+                  target: "pino-pretty",
+                  level: "info", // log only info and above to console
+                  options: {
+                    ...basePinoOptions,
+                    colorize: true,
                   },
-                  {
-                    target: "pino/file",
-                    level: "info", // log only errors to file
-                    options: {
-                      ...basePinoOptions,
-                      destination: "logs/info.log",
-                      mkdir: true,
-                      sync: false,
-                    },
+                },
+                {
+                  target: "pino/file",
+                  level: "info", // log only errors to file
+                  options: {
+                    ...basePinoOptions,
+                    destination: "logs/info.log",
+                    mkdir: true,
+                    sync: false,
                   },
-                  {
-                    target: "pino/file",
-                    level: "error", // log only errors to file
-                    options: {
-                      ...basePinoOptions,
-                      destination: "logs/error.log",
-                      mkdir: true,
-                      sync: false,
-                    },
+                },
+                {
+                  target: "pino/file",
+                  level: "error", // log only errors to file
+                  options: {
+                    ...basePinoOptions,
+                    destination: "logs/error.log",
+                    mkdir: true,
+                    sync: false,
                   },
-                ],
-              },
+                },
+              ],
+            },
         },
         exclude: [{ method: RequestMethod.ALL, path: "doc" }],
 

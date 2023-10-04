@@ -1,4 +1,5 @@
 import { capitalize } from "helper-fns";
+
 // import { readPackageSync } from "read-pkg";
 
 export const REQUEST_ID_TOKEN_HEADER = "x-request-id";

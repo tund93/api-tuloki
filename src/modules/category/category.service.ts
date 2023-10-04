@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm"; 
+import { InjectRepository } from "@nestjs/typeorm";
 import { BaseRepository } from "@common/database";
 import type { OffsetPaginationDto } from "@common/dtos";
 import { Category } from "@entities";
