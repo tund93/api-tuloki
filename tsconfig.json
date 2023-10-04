@@ -1,0 +1,40 @@
+{
+  "extends": "@rubiin/tsconfig",
+	"module": "commonjs",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@lib/*": [
+        "./lib/*"
+      ],
+      "@common/*": [
+        "./common/*"
+      ],
+      "@modules/*": [
+        "./modules/*"
+      ],
+      "@entities": [
+        "./entities"
+      ],
+      "@mocks": [
+        "./_mocks_"
+      ],
+      "@generated": [
+        "./generated"
+      ]
+    },
+    "outDir": "dist"
+  },
+  "include": [
+    "test/**/*",
+    "src/**/*",
+    "eslint.config.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "types": [
+    "./src/common/types/global.d.ts"
+  ]
+}
